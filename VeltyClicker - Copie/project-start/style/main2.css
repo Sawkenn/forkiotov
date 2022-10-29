@@ -1,0 +1,91 @@
+body{
+    background-color: #212121;
+}
+
+.box {
+    width: 400px;
+    height: 300px;
+    background-color: rgb(31, 31, 31);
+    position: relative;
+  }
+  .box::before,
+.box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(45deg, #1B753E, #27A056, #00ff00, #8CEBB1, #1B753E, #27A056, #00ff00, #8CEBB1);
+  width: 100%;
+  height: 100%;
+  transform: scale(1.02);
+  z-index: -1;
+  background-size: 500%;
+  animation: animate 20s infinite;
+}
+.box::after {
+    filter: blur(20px);
+  }
+  @keyframes animate {
+    0% { background-position: 0 0; }
+    50% { background-position: 300% 0; }
+    100% { background-position: 0 0; }
+  }
+  .box{
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 1500px;
+    padding-bottom: 600px;
+  }
+
+  @media screen and (max-width: 1499px) {
+    .box{
+      width: 70%;
+      padding-top: 900px;
+      margin-top: 200px;
+    }
+  }
+
+    @media screen and (max-width: 1499px) {
+    .box{
+      width: 70%;
+     
+    }
+  }
+
+.search{
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 90px;
+  color: #1B753E;
+}
+
+.search:hover{
+color: #00ff00;
+transition: 0.5s;
+}
+
+.search:hover::after{
+  transition: 0.5s;
+}
+
+.btn{
+  text-align: center;
+  margin-top: 20px;
+  
+
+}
+
+.boutton{
+  background-color: #212121;
+  border-radius: 20px;
+  font-size: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.boutton:hover{
+background-color: #00ff00;
+transition: 0.5s;
+}
